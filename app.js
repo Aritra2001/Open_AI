@@ -10,5 +10,5 @@ app.use(express.json())
 app.use(express.static('public'))
 
 //routes
-app.post('/', generateAnswer)
-app.post('/', generateImage)
+app.post('', generateAnswer)
+app.post('', generateImage)
