@@ -10,7 +10,7 @@ const thumbnail = document.querySelector('.thumbnail img')
 metaForm.addEventListener('submit', async (e) => {
   e.preventDefault()
 
-  const res = await fetch('/openai/meta', {
+  const res = await fetch('https://open-ai-br7w.vercel.app/openai/meta', {
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({title: metaForm.title.value}),
     method: 'POST'
@@ -27,7 +27,7 @@ metaForm.addEventListener('submit', async (e) => {
 imageForm.addEventListener('submit', async (e) => {
     e.preventDefault()
   
-    const res = await fetch('/openai/image', {
+    const res = await fetch('https://open-ai-br7w.vercel.app/openai/image', {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({prompt: imageForm.prompt.value}),
       method: 'POST'
